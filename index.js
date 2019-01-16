@@ -61,7 +61,7 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
            }
        })
         .then((data)=>{
-            console.log(data);
+            
             //have to get rid of airport as no one live there and it throws a bug in the visualization
             data = data.filter((d,i)=>{
               return d.name != 'Airport';
@@ -385,7 +385,12 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
          this.leaf.append('foreignObject').text((d,i)=>{if(i==0 ||i%8==0 && d.value>0 && !d.data.name.includes('park-cem') ){
                                         return d.data.name.replaceAll("-"," ")}})
                                  .attr('class','treemap-text-label')
-
+                                 .attr('width',d=>{
+                                   return window.innerWidth<625?0:30;
+                                 })
+                                 .attr('height', d=>{
+                                   return window.innerWidth<625?0:125;
+                                 })
                                  .style('width','30px')
                                  .style('overflow', 'show')
                                  .style('opacity',0.75)
