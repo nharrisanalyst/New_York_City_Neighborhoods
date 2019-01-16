@@ -1,0 +1,142 @@
+$ff:'Palatino';
+$bg: White;
+$breakpoint: '(max-width: 768px)';
+
+$breakpointSmall:'(max-width:455px)';
+
+body{
+  background:$bg;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: lighter;
+
+  #data-source{
+        font-size: 10px;
+      text-align: left;
+      padding-top: 50px;
+  }
+}
+
+#treemap-container{
+  width:80vh;
+}
+
+.group-rect-leaves{
+
+  &:hover{
+
+    cursor: pointer;
+  }
+}
+
+#project-container{
+  width:100%;
+
+  #text-title{
+    width:100%;
+    text-align: center;
+  }
+  #title{
+    font-size: 25px;
+    font-weight: bold;
+    padding-top:10px;
+    margin-bottom:10px;
+    margin-left: 10%;
+    margin-right:10%;
+    border-bottom: 2px solid black;
+  }
+
+  #discription{
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:20px;
+
+  }
+  #author{
+    text-align: center;
+  }
+  .select-barform-inputs{
+    height:25px;
+  }
+
+}
+
+#disc-treemap-container{
+  width:49%;
+  display:inline-block;
+  @media #{$breakpoint}{
+    width:100%
+  }
+    #treemap-container{
+      width:100%;
+
+    }
+}
+
+#bar-chart-whole-container{
+  width:49%;
+  display:inline-block;
+  @media #{$breakpoint}{
+    width:100%
+  }
+
+  #bar-chart-container{
+    width:100%;
+  }
+
+}
+
+#bar-chart-form{
+  width:100%;
+  margin-left:0px;
+
+  .borough-select{
+
+    margin-right:0px;
+
+  }
+  .neighborhood-select{
+    max-width:100%;
+  }
+}
+
+label{
+  display: block;
+  padding-top:5px;
+}
+
+#borough-div{
+  width: 115px;
+  max-width: 100%;
+  display:inline-block;
+  margin-left:2%;
+}
+#neighborhood-div{
+  width:380px;
+  display:inline-block;
+  margin-left:2%;
+  max-width: 98%;
+}
+path.domain{
+  opacity:0.0;
+}
+
+
+.x-scale-class{
+  text{
+    @media #{$breakpointSmall}{
+      transform: translate(5px,0px) rotate(20deg);
+    }
+
+  }
+}
+
+@media screen and (max-width: 767px) {
+  select {
+
+    font-size: 16px;
+
+  }
+  #borough-div{
+    width: 145px;
+  }
+}

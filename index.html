@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>New York City Neighborhood</title>
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.7/crossfilter.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+  </head>
+  <body>
+    <div id="project-container">
+      <div id = 'text-title'>
+      <div id ="title">New York City Neighborhood's Racial Demographics</div>
+        <div id='discription'> NYC is one of the most racially diverse places in the world. In NYC One can go from neighboorhood to neighborhood and
+             feel like they are in a whole new country. This interactive allows one to explore NYC's Racial Demographics.
+             Click on a differnt neighborhood in the treemap(on the left/top(mobile)) or select different boroughs and neighborhoods
+              on the bar chart (on the right/bottom(mobile)) to discover the different racial makeup and demographic trends in one of the worlds greatest cities. </div>
+      </div>
+      <div id='author'>
+         Author: <a href='http://www.twitter.com/NathanIHarris'>Nathan Harris</a>
+      </div>
+      <div id ='disc-treemap-container'>
+
+          <div id="treemap-container" >
+          </div>
+
+          <div id='legend-container'>
+          </div>
+
+      </div>
+      <div id='bar-chart-whole-container'>
+        <div id="bar-chart-container">
+        </div>
+        <div id='bar-chart-form'>
+        </div>
+     </div>
+
+   </div>
+   <div id='data-source'> data source is <a href="https://www1.nyc.gov/assets/planning/download/pdf/data-maps/nyc-population/census2010/t_pl_p3a_nta.pdf">Table PL-P3A NTA: Total Population by Mutually Exclusive Race and Hispanic Origin - New York City Neighborhood Tabulation Areas*, 2010</a>
+   </div>
+  <script src="index.js"></script>
+  </body>
+</html>
