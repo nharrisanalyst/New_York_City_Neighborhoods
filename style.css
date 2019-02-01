@@ -8,6 +8,9 @@ body {
     padding-top: 50px;
     margin-bottom: 50px; }
 
+a {
+  color: black; }
+
 #treemap-container {
   width: 80vh; }
 
