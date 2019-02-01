@@ -296,6 +296,7 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
 
 
 
+
         this.setTreeMap();
         this.makeScale();
         this.drawleaves();
@@ -364,7 +365,7 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
                                     "#827878"])
        }
        drawTitles(){
-         const titles = [{title:'Brooklyn',x:this.margin.l,y:27, rotate:0},{title:'Manhattan',x:this.width-55 ,y:27,rotate:0},{title:'Staten Island',x:this.width-75,y:(this.height+this.margin.l+this.margin.r-15),rotate:0},
+         const titles = [{title:'Brooklyn',x:this.margin.l,y:27, rotate:0},{title:'Manhattan',x:this.width-65 ,y:27,rotate:0},{title:'Staten Island',x:this.width-85,y:(this.height+this.margin.l+this.margin.r-15),rotate:0},
                          {title:'The Bronx',x:this.width+45,y:(this.height/2)+20, rotate:1},{title:'Queens',x:20,y:(this.height+this.margin.t), rotate:3}]
 
          const boroughs = d3.select('.static-main-svg')
@@ -377,7 +378,7 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
 
                 boroughs.append('text')
                         .text(d=>d.title)
-                        .style('opacity','0.45');
+                        .style('opacity','1');
 
 
 
