@@ -5,7 +5,8 @@ body {
   body #data-source {
     font-size: 10px;
     text-align: left;
-    padding-top: 50px; }
+    padding-top: 50px;
+    margin-bottom: 50px; }
 
 #treemap-container {
   width: 80vh; }
