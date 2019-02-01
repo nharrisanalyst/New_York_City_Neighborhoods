@@ -61,7 +61,7 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
            }
        })
         .then((data)=>{
-            
+
             //have to get rid of airport as no one live there and it throws a bug in the visualization
             data = data.filter((d,i)=>{
               return d.name != 'Airport';
@@ -283,15 +283,17 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
        }
 
       draw(){
-        this.margin ={t:35,r:35,b:35,l:35}
+        this.margin ={t:35,r:35,b:135,l:35}
         this.width = this.contEl.offsetWidth-(this.margin.l+this.margin.r);
         this.height = this.width;
         this.contEl.innerHTML ="";
         this.svg = d3.select(this.contEl)
                       .append('svg')
                       .attr('class', 'static-main-svg')
-                      .style('height', this.height+(this.margin.l+this.margin.r))
-                      .style('width', this.width+(this.margin.l+this.margin.r))
+                      .attr('height', this.height+(this.margin.l+this.margin.r))
+                      .attr('width', this.width+(this.margin.l+this.margin.r))
+
+
 
 
         this.setTreeMap();
@@ -517,6 +519,7 @@ class Bar {
 
     this.svg.append('g')
             .attr('class', 'y-scale-class')
+            .attr('transform', 'translate(' + 10 + ',' + 0 + ')')
             .call(this.yAxis);
 
 
@@ -535,7 +538,9 @@ class Bar {
           .attr('width', this.xScale.bandwidth())
           .attr('y', (d) =>{return this.yScale(d.value)})
           .attr('height', (d)=>{return this.height-this.yScale(d.value)})
-          .attr('fill', (d)=>{return this.colorScale(d.key)});
+          .attr('fill', (d)=>{return this.colorScale(d.key)})
+          .attr('stroke-width', 1)
+          .attr('stroke', 'black')
 
 
   }
@@ -564,7 +569,9 @@ class Bar {
                 .attr('width', this.xScale.bandwidth())
                 .attr('y', (d) =>{return this.yScale(d.value)})
                 .attr('height', (d)=>{return this.height-this.yScale(d.value)})
-                .attr('fill', (d)=>{return this.colorScale(d.key)});
+                .attr('fill', (d)=>{return this.colorScale(d.key)})
+                .attr('stroke-width', 1)
+                .attr('stroke', 'black');
 
 
 

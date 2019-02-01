@@ -14,7 +14,8 @@ body {
   cursor: pointer; }
 
 #project-container {
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   #project-container #text-title {
     width: 100%;
     text-align: center; }
@@ -31,18 +32,28 @@ body {
     padding-right: 5%;
     padding-bottom: 20px; }
   #project-container #author {
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 40px; }
   #project-container .select-barform-inputs {
     height: 25px; }
 
+#graphics-container {
+  width: 92%;
+  text-align: center;
+  display: inline-block; }
+
 #disc-treemap-container {
   width: 49%;
-  display: inline-block; }
+  display: inline-block;
+  position: relative;
+  bottom: 40px; }
   @media (max-width: 768px) {
     #disc-treemap-container {
-      width: 100%; } }
+      width: 100%;
+      position: inherit; } }
   #disc-treemap-container #treemap-container {
-    width: 100%; }
+    width: 100%;
+    position: inherit; }
 
 #bar-chart-whole-container {
   width: 49%;
@@ -55,7 +66,8 @@ body {
 
 #bar-chart-form {
   width: 100%;
-  margin-left: 0px; }
+  text-align: left;
+  padding-left: 55px; }
   #bar-chart-form .borough-select {
     margin-right: 0px; }
   #bar-chart-form .neighborhood-select {
@@ -72,7 +84,7 @@ label {
   margin-left: 2%; }
 
 #neighborhood-div {
-  width: 380px;
+  width: 225px;
   display: inline-block;
   margin-left: 2%;
   max-width: 98%; }

@@ -18,6 +18,7 @@ body{
 
 #treemap-container{
   width:80vh;
+
 }
 
 .group-rect-leaves{
@@ -30,6 +31,7 @@ body{
 
 #project-container{
   width:100%;
+  text-align: center;
 
   #text-title{
     width:100%;
@@ -53,6 +55,7 @@ body{
   }
   #author{
     text-align: center;
+    padding-bottom: 40px;
   }
   .select-barform-inputs{
     height:25px;
@@ -60,14 +63,25 @@ body{
 
 }
 
+#graphics-container{
+  width:92%;
+  text-align: center;
+  display: inline-block;
+}
+
 #disc-treemap-container{
   width:49%;
   display:inline-block;
+  position: relative;
+  bottom: 40px;
   @media #{$breakpoint}{
-    width:100%
+    width:100%;
+    position: inherit;
   }
     #treemap-container{
       width:100%;
+      position: inherit;
+
 
     }
 }
@@ -87,7 +101,8 @@ body{
 
 #bar-chart-form{
   width:100%;
-  margin-left:0px;
+  text-align: left;
+  padding-left: 55px;
 
   .borough-select{
 
@@ -111,7 +126,7 @@ label{
   margin-left:2%;
 }
 #neighborhood-div{
-  width:380px;
+  width:225px;
   display:inline-block;
   margin-left:2%;
   max-width: 98%;
