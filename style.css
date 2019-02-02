@@ -50,7 +50,7 @@ a {
   width: 49%;
   display: inline-block;
   position: relative;
-  bottom: 40px; }
+  bottom: 20px; }
   @media (max-width: 768px) {
     #disc-treemap-container {
       width: 100%;
@@ -106,5 +106,16 @@ path.domain {
 
   #borough-div {
     width: 145px; } }
+.off {
+  display: none; }
+
+#comments-on-off {
+  text-align: left;
+  padding-left: 35px; }
+  #comments-on-off .neighborhood-label-checkbox {
+    display: inline-block;
+    vertical-align: bottom; }
+  #comments-on-off .text-label-checkbox {
+    display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */

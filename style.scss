@@ -76,7 +76,7 @@ a{
   width:49%;
   display:inline-block;
   position: relative;
-  bottom: 40px;
+  bottom: 20px;
   @media #{$breakpoint}{
     width:100%;
     position: inherit;
@@ -156,5 +156,23 @@ path.domain{
   }
   #borough-div{
     width: 145px;
+  }
+}
+
+.off{
+  display:none;
+}
+
+#comments-on-off{
+   text-align: left;
+   padding-left: 35px;
+
+  .neighborhood-label-checkbox{
+    display:inline-block;
+    vertical-align: bottom;
+  }
+  .text-label-checkbox{
+    display:inline-block;
+
   }
 }

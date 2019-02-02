@@ -256,6 +256,9 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
         //on hover for treemap
            mousevents();
 
+      //onoff for neighborhood Labels
+      clickChange()
+
         //redraw charts on resize
 
           var resizeFunction = debounce(function() {
@@ -265,6 +268,8 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
 
              //on hover for treemap
                 mousevents();
+
+
 
               }, 250);
           window.addEventListener('resize', resizeFunction);
@@ -302,6 +307,7 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
         this.drawleaves();
         this.drawTitles();
         this.drawLabels();
+        this.drawOnOff();
 
 
 
@@ -408,6 +414,9 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
       rerender(){
         this.contEl.innerHTML = "";
         this.draw();
+      }
+      drawOnOff(){
+
       }
 
 
@@ -881,4 +890,27 @@ function tree_mouseout(){
         d3.selectAll(".single-neighborhood-"+classAttr).selectAll('.treemap-text-label').style('font-size','8px').style('opacity',0.75);
 
       })
+}
+
+function clickChange(){
+    this.labelOn = d3.select('#comments-on-off')
+
+
+    this.labelOn.append('input')
+                                .attr('type','checkbox')
+                                .attr('class', 'neighborhood-label-checkbox')
+                                .attr('checked', ' ');
+
+    this.labelOn.append('div').attr('class', 'text-label-checkbox').text('Turn Neighborhood Labels Off')
+
+d3.select('.neighborhood-label-checkbox').on('change',handleClickChange)
+}
+
+function handleClickChange(){
+      console.log(d3.select(this).node().checked)
+    if(d3.select(this).node().checked){
+      d3.selectAll('.treemap-text-label').attr('class', function(){return 'treemap-text-label'})
+    }else{
+      d3.selectAll('.treemap-text-label').attr('class', 'treemap-text-label off')
+    }
 }
