@@ -73,6 +73,7 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
             var neighborhood_dict ={}
 
              tree_data = data.reduce((a,val)=>{
+
                   neighborhood_names.push({name:val.name, borough:val.Borough});
                   nieghborhood_borough_names[val.Borough].push({name:val.name});
                   neighborhood_dict[val.name]=val.Borough;
@@ -94,8 +95,15 @@ d3.csv("New_York_Neighborhood_Demo.csv", (d)=>{
 
             const root = d3.hierarchy(nestedData, (d)=>{return d.values;})
 
+          
 
+            nieghborhood_borough_names['StatenIsland']=nieghborhood_borough_names['StatenIsland'].filter(function(val){
+              return val.name != 'park-cemetery-etc-StatenIsland';
+            })
 
+            neighborhood_names = neighborhood_names.filter(function(val){
+              return val.name != 'park-cemetery-etc-StatenIsland';
+            })
 
 
 
