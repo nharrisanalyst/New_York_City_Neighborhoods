@@ -166,6 +166,9 @@ path.domain{
 #comments-on-off{
    text-align: left;
    padding-left: 35px;
+   @media #{$breakpoint}{
+     display:none;
+   }
 
   .neighborhood-label-checkbox{
     display:inline-block;

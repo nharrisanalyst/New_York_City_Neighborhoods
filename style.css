@@ -112,6 +112,9 @@ path.domain {
 #comments-on-off {
   text-align: left;
   padding-left: 35px; }
+  @media (max-width: 768px) {
+    #comments-on-off {
+      display: none; } }
   #comments-on-off .neighborhood-label-checkbox {
     display: inline-block;
     vertical-align: bottom; }
