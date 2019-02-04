@@ -106,6 +106,9 @@ a{
   width:100%;
   text-align: left;
   padding-left: 55px;
+  @media #{$breakpoint}{
+    padding-left: 0px;
+  }
 
   .borough-select{
 
@@ -127,12 +130,18 @@ label{
   max-width: 100%;
   display:inline-block;
   margin-left:2%;
+  @media #{$breakpoint}{
+    width:100%;
+  }
 }
 #neighborhood-div{
   width:225px;
   display:inline-block;
   margin-left:2%;
   max-width: 98%;
+  @media #{$breakpoint}{
+    width:100%;
+  }
 }
 path.domain{
   opacity:0.0;
@@ -152,11 +161,10 @@ path.domain{
   select {
 
     font-size: 16px;
+    width:100%;
 
   }
-  #borough-div{
-    width: 145px;
-  }
+
 }
 
 .off{

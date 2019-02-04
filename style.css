@@ -72,6 +72,9 @@ a {
   width: 100%;
   text-align: left;
   padding-left: 55px; }
+  @media (max-width: 768px) {
+    #bar-chart-form {
+      padding-left: 0px; } }
   #bar-chart-form .borough-select {
     margin-right: 0px; }
   #bar-chart-form .neighborhood-select {
@@ -86,12 +89,18 @@ label {
   max-width: 100%;
   display: inline-block;
   margin-left: 2%; }
+  @media (max-width: 768px) {
+    #borough-div {
+      width: 100%; } }
 
 #neighborhood-div {
   width: 225px;
   display: inline-block;
   margin-left: 2%;
   max-width: 98%; }
+  @media (max-width: 768px) {
+    #neighborhood-div {
+      width: 100%; } }
 
 path.domain {
   opacity: 0.0; }
@@ -102,10 +111,8 @@ path.domain {
 
 @media screen and (max-width: 767px) {
   select {
-    font-size: 16px; }
-
-  #borough-div {
-    width: 145px; } }
+    font-size: 16px;
+    width: 100%; } }
 .off {
   display: none; }
 
